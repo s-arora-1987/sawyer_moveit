@@ -6,6 +6,7 @@
   <arg name="tip_name" default="right_hand"/>
   <!-- Add controller box collision shape to check for link collisions if set to true-->
   <arg name="controller_box" default="false"/>
+  <arg name="robotiqgripper" default="false"/>
 
 
   <!-- By default we do not overwrite the URDF. Change the following to true to change the default behavior -->
@@ -21,6 +22,7 @@
   <param name="robot_description_semantic"
       command="$(find xacro)/xacro --inorder $(find sawyer_moveit_config)/srdf/sawyer.srdf.xacro
           electric_gripper:=$(arg electric_gripper)
+          robotiqgripper:=$(arg robotiqgripper)
           tip_name:=$(arg tip_name)
           controller_box:=$(arg controller_box)"/>
 

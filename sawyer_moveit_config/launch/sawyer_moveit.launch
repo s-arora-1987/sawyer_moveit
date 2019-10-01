@@ -14,6 +14,8 @@
   <arg name="controller_box" default="false"/>
   <!-- Left and electric gripper arg. Set to true to check for collisions for their links -->
   <arg name="electric_gripper" default="false"/>
+  <arg name="robotiqgripper" default="false"/>
+  
   <!-- Set the kinematic tip for the right_arm move_group -->
   <arg name="tip_name"     if="$(arg electric_gripper)" default="right_gripper_tip"/>
   <arg name="tip_name" unless="$(arg electric_gripper)" default="right_hand"/>
@@ -23,6 +25,7 @@
     <arg name="electric_gripper" value="$(arg electric_gripper)"/>
     <arg name="tip_name" value="$(arg tip_name)"/>
     <arg name="controller_box" value="$(arg controller_box)"/>
+    <arg name="robotiqgripper" value="$(arg robotiqgripper)"/>
   </include>
 
   <arg name="kinect" default="false" />

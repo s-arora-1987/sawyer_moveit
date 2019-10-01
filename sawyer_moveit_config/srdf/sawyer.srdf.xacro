@@ -23,7 +23,9 @@
     <xacro:rethink_electric_gripper side="right"/>
   </xacro:if>
 -->
+  <xacro:if value="$(arg robotiqgripper)">
     <xacro:include filename="$(find sawyer_moveit_config)/srdf/robotiq_2f_gripper.srdf.xacro" />
+  </xacro:if>
 
 
 </robot>
